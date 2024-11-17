@@ -1,0 +1,154 @@
+*body{
+    padding: 0;
+margin: 0;
+border: 0;
+font-family: "Nunito", sans-serif;
+text-align: center;
+font-weight: 600;
+cursor: default;
+}
+.non-renponsive-nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 50px;
+}
+.head{
+background-color:white ;
+height: 50px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.logo{
+display: flex;
+justify-content: center;
+width: 50%;
+scale: 1.5;
+}
+.logo p{
+font-family: "Sour Gummy", sans-serif;
+font-size: larger;
+}
+.s-word{
+color: #88C273;
+}
+.nav-content{
+width: 50%;
+display: flex;
+justify-content: space-around;
+}
+.nav-content a{
+text-decoration: none;
+color: #344c64;
+transition-duration: 0.5s;
+cursor: pointer;
+}
+.nav-chosen{
+opacity: 0.5;
+scale: 1.1;
+}
+.nav-content a:hover{
+scale: 1.1;
+opacity: 0.5;
+}
+.responsive-nav{
+display: none;
+}
+
+@media (max-width:820px) {
+.non-renponsive-nav{
+    display: none;
+}
+.logo{
+    scale: 1.8;
+    text-align: center;
+    width: 100%;
+}
+.responsive-nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid gray;
+    position: sticky;
+    bottom: 0;
+}
+.nav-cont{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    z-index:10;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.r-nav-link{
+    width: 25%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.r-nav-link a{
+    border-left: 1px solid gray ;
+    width: 100%;
+    height: 35px;
+    text-decoration: none;
+    color: #344c64;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.r-nav-link i{
+    cursor: pointer;
+}
+}
+
+.banner{
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220831/pngtree-modern-college-campus-buildings-educational-application-hall-photo-image_19709694.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+
+    height:700px;
+    width:100%; 
+    
+}
+
+.text-container{
+         position: absolute;
+         color:#eee;
+         text-align:center;
+}
+
+.text-container h1{
+    margin:0;
+    font-size:70px;
+
+}
+
+.text-container h2{
+    margin:10px 0 0 0;
+    font-size: 40px;
+}
+
+.text-container p{
+    font-size: 35px;
+    margin : 20px 0 0 0;
+
+}
+
+
+.main{
+/* background-color: #eeeeee; */
+height: 1200px;
+}
+
+.foot{
+background-color: #344c64   ;
+height: 200px;
+box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+color: white;
+}
