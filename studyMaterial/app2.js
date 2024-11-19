@@ -12,18 +12,36 @@ navNonChosen.forEach(element => {
 });
 
 
-document.querySelectorAll(".button").forEach((button, index) => {
-    button.addEventListener("click", () => {
-        const dropdown = document.getElementById(`dropdown${index + 1}`);
-        const isVisible = dropdown.style.display === "flex";
-        document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none"); // Close other dropdowns
-        dropdown.style.display = isVisible ? "none" : "flex";
-    });
-});
+
+let but = document.querySelectorAll(".button")
+let drop = document.querySelectorAll(".dropdown")
+let wrap = document.querySelectorAll(".button-wrapper")
+let chosenBut;
+but.forEach((button,index)=>{
+    button.addEventListener("click",()=>{
+        chosenBut = but[index]          //button that is been click
+        chosenBut.style.scale ="1.125"  //changing the css of that but
+        chosenBut.style.backgroundColor = " rgba(160,214,131,0.5)"
+        but.forEach((val,idx)=>{
+            if(idx != (index)){
+                wrap[idx].style.display = "none"
+            }
+        })
+        let dropdown = document.querySelector(`#dropdown${index+1}`)
+        dropdown.style.display = "flex"
+    })
+})
 
 // Close dropdowns when clicking outside
 document.addEventListener("click", (event) => {
     if (!event.target.closest(".button-wrapper")) {
-        document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none");
+        chosenBut.style.scale ="1"  //undoing the css of but
+        chosenBut.style.backgroundColor = " rgba(160,214,131,0.2)"
+        drop.forEach(d => {          
+            d.style.display = "none"
+            wrap.forEach(val=>{
+                val.style.display = "flex"
+            })
+        })
     }
 });
