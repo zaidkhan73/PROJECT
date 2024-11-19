@@ -145,8 +145,7 @@
 
 
 
-
-
+/*FOOTER CREATION*/
 .foot{
     background-color: #344c64   ;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
@@ -227,4 +226,74 @@
 .main{
     background-color: #eeeeee;
     height: 600px;
+}
+
+
+/*DROPDOWN CREATION*/
+/* Layout for buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.button-wrapper {
+    position: relative; /* Ensures dropdown is positioned relative to button */
+    width: 100%; /* Align buttons properly */
+}
+
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Aligns dropdown directly below the button */
+    left: 20PX;
+    width:1000px;
+    background-color: rgba(173, 233, 140, 0.626);
+    border: 2px solid #A0D683;
+    box-shadow: 0 4px 10px rgba(150, 148, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 100;
+    animation: dropdownAnim 0.3s ease-in-out forwards;
+}
+
+/* Animation for dropdown */
+@keyframes dropdownAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown button styles */
+.dropdown button {
+    background: none;
+    border: none;
+    padding: 10px;
+    color: #344c64;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: rgba(160, 214, 131, 0.5);
+}
+
+/* Button Styling (for better alignment) */
+.button {
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.dropdown button:hover{
+    font-size: 25px;
 }

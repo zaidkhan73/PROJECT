@@ -12,10 +12,18 @@ navNonChosen.forEach(element => {
 });
 
 
+document.querySelectorAll(".button").forEach((button, index) => {
+    button.addEventListener("click", () => {
+        const dropdown = document.getElementById(`dropdown${index + 1}`);
+        const isVisible = dropdown.style.display === "flex";
+        document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none"); // Close other dropdowns
+        dropdown.style.display = isVisible ? "none" : "flex";
+    });
+});
 
-let button_2 = document.querySelectorAll(".button-2")
-button_2.forEach(val=>{
-    val.addEventListener("click",()=>{
-        location.href ="index-3.html"
-    })
-})
+// Close dropdowns when clicking outside
+document.addEventListener("click", (event) => {
+    if (!event.target.closest(".button-wrapper")) {
+        document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none");
+    }
+});
