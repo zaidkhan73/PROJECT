@@ -71,6 +71,7 @@ display: none;
         border-top: 2px solid gray;
         position: sticky;
         bottom: 0;
+        background-color: #eeeeee;
     }
     .nav-cont{
         height: 40px;
